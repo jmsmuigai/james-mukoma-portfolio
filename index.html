@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-      /* Overall Background Image */
+      /* General Styles */
       body {
         background: url('images/back.jpg') no-repeat center center fixed;
         background-size: cover;
@@ -18,16 +18,14 @@
         font-family: 'Poppins', sans-serif;
       }
 
-      /* Ensure all sections have a background color or transparency for readability */
       section {
-        background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+        background: rgba(255, 255, 255, 0.9);
         border-radius: 10px;
         padding: 20px;
         margin: 20px auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
 
-      /* Adjust footer for better visibility */
       footer {
         background: rgba(255, 255, 255, 0.9);
         padding: 10px;
@@ -37,190 +35,7 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
 
-      /* Add styles for improved profile photo and animations */
-      .profile-photo {
-        width: 200px; /* Increased size */
-        height: 200px;
-        border-radius: 50%;
-        border: 5px solid #f0f0f0; /* Subtle border */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better finish */
-        transition: transform 0.3s ease; /* Smooth hover effect */
-      }
-      .profile-photo:hover {
-        transform: scale(1.1); /* Slight zoom on hover */
-      }
-      .btn-container {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
-      }
-      .btn {
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background: linear-gradient(145deg, #ff758c, #ff7eb3);
-        color: white;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-      .btn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-      }
-      #socials-container {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 30px;
-      }
-      .social-item {
-        text-align: center;
-      }
-      .social-icon {
-        font-size: 48px; /* Larger size */
-        cursor: pointer;
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-      .social-icon:hover {
-        transform: scale(1.2); /* Slight zoom on hover */
-      }
-      .social-label {
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-      .social-label.linkedin {
-        color: #0077b5; /* LinkedIn blue */
-        font-family: 'Arial', sans-serif;
-      }
-      .social-label.github {
-        color: #333; /* GitHub black */
-        font-family: 'Arial', sans-serif;
-      }
-      .social-label.email {
-        color: #d44638; /* Gmail red */
-        font-family: 'Arial', sans-serif;
-      }
-
-      /* Redesigned About Me Section */
-      #about {
-        background: linear-gradient(135deg, #ff7eb3, #ff758c);
-        color: white;
-        padding: 50px 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-      #about .section-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        align-items: center;
-      }
-      #about .about-pic {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        border: 5px solid white;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      }
-      #about .text-container p {
-        font-size: 18px;
-        line-height: 1.6;
-      }
-      #about .badge {
-        display: inline-block;
-        background: white;
-        color: #ff758c;
-        padding: 5px 10px;
-        border-radius: 20px;
-        margin: 5px;
-        font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Redesigned Contact Section */
-      #contact {
-        background: linear-gradient(135deg, #ffe6f0, #ffb3c6);
-        color: #333;
-        padding: 50px 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        border: 3px solid #ff758c; /* Beautiful outline */
-        text-align: center;
-      }
-      #contact .contact-info-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        margin: 20px 0;
-        font-size: 18px;
-      }
-      #contact .contact-icon {
-        font-size: 36px;
-        color: #ff758c;
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-      #contact .contact-icon:hover {
-        transform: scale(1.2);
-        color: #d44638;
-      }
-      #contact a {
-        font-size: 18px;
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-      #contact a:hover {
-        color: #ff758c;
-      }
-      #contact form {
-        margin-top: 30px;
-        text-align: left;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #contact form input,
-      #contact form textarea {
-        width: 100%;
-        padding: 15px;
-        margin: 10px 0;
-        border: 2px solid #ff758c;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
-      }
-      #contact form button {
-        background: linear-gradient(145deg, #ff758c, #ff7eb3);
-        color: white;
-        padding: 15px 30px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        display: block;
-        margin: 20px auto;
-      }
-      #contact form button:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      /* AI Assistance Credit */
-      footer p:last-child {
-        font-size: 14px;
-        color: #ff758c;
-        margin-top: 10px;
-      }
-
-      /* Stylish Header */
+      /* Header Section */
       #desktop-nav {
         background: linear-gradient(135deg, #ff758c, #ff7eb3);
         color: white;
@@ -250,9 +65,6 @@
         margin: 0;
         padding: 0;
       }
-      #desktop-nav .nav-links li {
-        display: inline;
-      }
       #desktop-nav .nav-links a {
         font-size: 16px;
         font-weight: 600;
@@ -267,248 +79,265 @@
         transform: translateY(-3px);
       }
 
-      /* Redesigned Experience Section */
-      #experience {
-        background: linear-gradient(135deg, #ffe6f0, #ffb3c6);
-        color: #333;
-        padding: 50px 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        border: 3px solid #ff758c; /* Beautiful outline */
-      }
-      #experience .experience-details-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-      }
-      #experience .details-container {
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 400px;
-      }
-      #experience .details-container h2 {
-        font-size: 20px;
-        color: #ff758c;
-        margin-bottom: 15px;
+      /* Marquee Section */
+      .marquee {
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: white;
+        padding: 10px 0;
         text-align: center;
-      }
-      #experience .details-container p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #555;
+        font-size: 18px;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
-      /* Redesigned Projects Section */
+      /* Projects Section */
       #projects {
-        background: linear-gradient(135deg, #d4eaff, #b3d9ff);
-        color: #333;
-        padding: 50px 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        border: 3px solid #4a90e2; /* Beautiful outline */
+        position: relative;
+        background: url('images/projects.png') no-repeat center center;
+        background-size: cover;
+        color: white;
+        padding: 40px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      #projects h1 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #ff758c;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       }
       #projects .projects-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
         justify-content: center;
+        gap: 20px;
       }
       #projects .project {
-        background: white;
-        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        color: #333;
         padding: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       #projects .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
       }
       #projects .project h3 {
         font-size: 20px;
-        color: #4a90e2;
-        margin-bottom: 15px;
-        text-align: center;
-      }
-      #projects .project p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #555;
-        text-align: justify;
+        margin-bottom: 10px;
+        color: #ff758c;
       }
       #projects .project a {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
         font-size: 16px;
-        font-weight: bold;
-        color: white;
-        background: linear-gradient(145deg, #4a90e2, #6bb5ff);
-        border-radius: 5px;
-        text-decoration: none;
-        text-align: center;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
-      #projects .project a:hover {
-        background: #357ab8;
-        transform: translateY(-3px);
-      }
-
-      /* Redesigned Footer */
-      footer {
-        background: linear-gradient(135deg, #4a90e2, #6bb5ff);
-        color: white;
-        padding: 20px;
-        text-align: center;
-        border-radius: 10px;
-        margin: 20px auto;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-      footer a {
-        color: #ffe6f0;
+        color: #4a90e2;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
       }
-      footer a:hover {
+      #projects .project a:hover {
         color: #ff758c;
       }
+
+      /* Contact Section */
+      #contact .contact-info-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+      }
+      #contact .contact-info-container div {
+        text-align: center;
+      }
+      #contact .contact-icon {
+        font-size: 36px;
+        color: #ff758c;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      #contact .contact-icon:hover {
+        transform: scale(1.2);
+        color: #d44638;
+      }
+      #contact a {
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      #contact a:hover {
+        color: #ff758c;
+      }
+
+      /* Download CV Button */
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: linear-gradient(145deg, #ff758c, #ff7eb3);
+        color: white;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Chatbot */
+      #chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+      #chatbotToggle {
+        padding: 15px;
+        background: linear-gradient(135deg, #4a90e2, #ff758c);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+      }
+      #chatbot {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
     </style>
+    <!-- Add this script in the <head> section -->
+    <script src="//code.tidio.co/your-unique-id.js" async></script>
+    <script>
+      "use strict";
+      !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+          if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+          t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"], 
+          t.factory = function(e) {
+            return function() {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }), t.load = function(t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+        }
+      }();
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('your-drift-id');
+    </script>
   </head>
-  <body id="top">
-    <nav id="desktop-nav">
+  <body>
+    <!-- Header Section -->
+    <header id="desktop-nav">
       <div class="logo">
-        <a href="#">James Mukoma</a>
+        <a href="#top">James Mukoma</a>
       </div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
 
-    <section id="profile">
-      <div class="section__pic-container" style="text-align: center;">
-        <img src="images/profile.png" alt="James Mukoma Profile Picture" class="profile-photo" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1" style="text-align: center;">Hello, I'm</p>
-        <h1 class="title" style="text-align: center;">James Mukoma</h1>
-        <p style="text-align: center; font-size: 18px; color: #555;">
-          Empowering Digital Transformation | GIS & AI Innovator
-        </p>
-        <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('images/Profile.pdf')">Download CV</button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
-        </div>
-        <div id="socials-container">
-          <div class="social-item">
-            <i class="fab fa-linkedin social-icon" onclick="location.href='https://www.linkedin.com/in/james-mukoma-86534438/'"></i>
-            <p class="social-label linkedin">LinkedIn</p>
-          </div>
-          <div class="social-item">
-            <i class="fab fa-github social-icon" onclick="location.href='https://github.com/'"></i>
-            <p class="social-label github">GitHub</p>
-          </div>
-          <div class="social-item">
-            <i class="fas fa-envelope social-icon" onclick="location.href='mailto:jmsmuigai@gmail.com'"></i>
-            <p class="social-label email">Email</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Marquee Section -->
+    <div class="marquee">
+      Welcome to my portfolio! Explore my projects and experience.
+    </div>
 
-    <section id="marquee">
-      <div class="marquee-container">
-        <div class="marquee-track">
-          <img src="images/photo1.jpg" alt="Marquee Image 1" />
-          <img src="images/photo2.jpg" alt="Marquee Image 2" />
-          <img src="images/photo3.jpg" alt="Marquee Image 3" />
-          <img src="images/photo4.jpg" alt="Marquee Image 4" />
-          <img src="images/photo5.jpg" alt="Marquee Image 5" />
-        </div>
-      </div>
-    </section>
-
+    <!-- About Me Section -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
-          <img src="images/me.jpg" alt="James Mukoma" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-          <div class="text-container">
-            <p>
-              I am a dynamic Director of ICT and e-Government for the County Government of Garissa, with over 10 years of experience in leveraging technology to improve governance, service delivery, and community engagement. I collaborate with global partners like WFP, UNICEF, World Bank, Mercy Corps, and USAID, and lead GIS and AI initiatives to digitally transform Garissa County. With a background in HR and IT systems, I bridge the gap between people and technology.
-            </p>
-            <span class="badge">GIS Expert</span>
-            <span class="badge">AI Enthusiast</span>
-            <span class="badge">Strategic Leader</span>
-          </div>
+        <img src="images/james.jpg" alt="James Mukoma" class="about-pic" />
+        <div class="text-container">
+          <h1 class="title">About Me</h1>
+          <p>
+            Hi, I'm James Mukoma, a passionate web developer and GIS specialist with a knack for creating innovative solutions. I love combining technology and creativity to solve real-world problems.
+          </p>
+          <div class="badge">Web Developer</div>
+          <div class="badge">GIS Specialist</div>
         </div>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience">
-      <p class="section__text__p1">My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="details-container">
-          <h2>Key Roles</h2>
-          <p>Director of ICT – Garissa County (2019–Present)</p>
-          <p>Human Resources Director – Garissa County (2016–2019)</p>
-          <p>Payroll Manager – Garissa County (2014–2017)</p>
-          <p>Axle Load Control Manager – Avery EA Ltd (2011–2012)</p>
-          <p>System Administrator – Management Sciences for Health (2011)</p>
+          <h2>Web Development</h2>
+          <p>
+            Over 5 years of experience building responsive and user-friendly websites using modern technologies like HTML, CSS, JavaScript, and React.
+          </p>
         </div>
         <div class="details-container">
-          <h2>Skills & Tools</h2>
-          <p>QGIS, ArcGIS</p>
-          <p>Artificial Intelligence (AI)</p>
-          <p>Strategic HR Management</p>
-          <p>HTML, CSS, JavaScript</p>
-          <p>Systems Administration & Networking</p>
+          <h2>GIS Mapping</h2>
+          <p>
+            Expertise in GIS tools and technologies, creating interactive maps and spatial data visualizations for various industries.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
-      <p class="section__text__p1">My</p>
       <h1 class="title">Projects</h1>
       <div class="projects-container">
         <div class="project">
-          <h3>Personal Portfolio Website</h3>
+          <h3>Personal Portfolio</h3>
           <p>
-            This is my personal portfolio website showcasing my skills, experience, and projects. It is designed to be responsive and visually appealing, with unique sections for About Me, Experience, Skills, and Contact.
+            A showcase of my skills, experience, and projects, built with HTML, CSS, and JavaScript.
           </p>
-          <a href="#">View Project</a>
+          <a href="https://jmsmuigai.github.io/james-mukoma-portfolio/#" target="_blank" rel="noopener noreferrer">View Project</a>
         </div>
         <div class="project">
           <h3>GIS Mapping Tool</h3>
           <p>
-            A GIS-based mapping tool developed to assist in visualizing and analyzing spatial data for better decision-making in urban planning and resource management.
+            An interactive GIS mapping tool for visualizing spatial data, built using ArcGIS and JavaScript.
           </p>
-          <a href="#">View Project</a>
+          <a href="https://gis.garissa.go.ke/portal/home/" target="_blank" rel="noopener noreferrer">View Project</a>
         </div>
         <div class="project">
           <h3>AI Chatbot</h3>
           <p>
-            An AI-powered chatbot designed to provide customer support and automate responses, improving efficiency and user experience for businesses.
+            A conversational AI chatbot designed to assist users with queries and provide information interactively.
           </p>
-          <a href="#">View Project</a>
+          <a href="javascript:void(0);" onclick="document.getElementById('chatbot').style.display = 'block';">View AI Chatbot</a>
         </div>
       </div>
     </section>
 
+    <!-- Contact Me Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -519,11 +348,11 @@
         </div>
         <div>
           <i class="fab fa-linkedin contact-icon"></i>
-          <a href="https://www.linkedin.com/in/james-mukoma-86534438/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/james-mukoma-86534438/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <div>
           <i class="fab fa-github contact-icon"></i>
-          <a href="https://github.com/">GitHub</a>
+          <a href="https://github.com/jmsmuigai" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
       <form action="https://formspree.io/f/mjkyenoj" method="POST">
@@ -532,12 +361,54 @@
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn btn-color-1">Send Message</button>
       </form>
+      <div class="btn-container">
+        <a href="images/Profile.pdf" download class="btn">Download CV</a>
+      </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       <p>Made with 💡 by <a href="#top">James Mukoma</a></p>
       <p>&copy; 2024 All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+      <button id="chatbotToggle" style="padding: 15px; background: linear-gradient(135deg, #4a90e2, #ff758c); color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); font-size: 20px;">
+        💬
+      </button>
+      <div id="chatbot" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 350px; height: 400px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); overflow: hidden; display: flex; flex-direction: column;">
+        <div style="background: #4a90e2; color: white; padding: 10px; text-align: center; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+          Navigate the Website
+        </div>
+        <div id="chatbotMessages" style="flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9;">
+          <div style="margin-bottom: 10px; font-size: 14px; color: #333;">Hi! Where would you like to go?</div>
+          <button onclick="scrollToSection('about')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">About Me</button>
+          <button onclick="scrollToSection('experience')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Experience</button>
+          <button onclick="scrollToSection('projects')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Projects</button>
+          <button onclick="scrollToSection('contact')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Contact Me</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const chatbotToggle = document.getElementById('chatbotToggle');
+      const chatbot = document.getElementById('chatbot');
+      const openSound = new Audio('sounds/open.mp3'); // Add your sound file
+
+      chatbotToggle.addEventListener('click', () => {
+        chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+        openSound.play();
+      });
+
+      // Scroll to a specific section
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+          chatbot.style.display = 'none'; // Close chatbot after navigation
+        }
+      }
+    </script>
   </body>
 </html>

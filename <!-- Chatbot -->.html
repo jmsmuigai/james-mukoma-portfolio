@@ -1,0 +1,62 @@
+<!-- Contact Me Section -->
+<section id="contact">
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+  <div class="contact-info-container" style="display: flex; justify-content: center; gap: 30px; margin: 20px 0;">
+    <div style="text-align: center;">
+      <i class="fas fa-envelope contact-icon" style="font-size: 36px; color: #ff758c;"></i>
+      <a href="mailto:jmsmuigai@gmail.com" style="display: block; font-size: 16px; color: #333; text-decoration: none; font-weight: bold;">Email</a>
+    </div>
+    <div style="text-align: center;">
+      <i class="fab fa-linkedin contact-icon" style="font-size: 36px; color: #0077b5;"></i>
+      <a href="https://www.linkedin.com/in/james-mukoma-86534438/" target="_blank" rel="noopener noreferrer" style="display: block; font-size: 16px; color: #333; text-decoration: none; font-weight: bold;">LinkedIn</a>
+    </div>
+    <div style="text-align: center;">
+      <i class="fab fa-github contact-icon" style="font-size: 36px; color: #333;"></i>
+      <a href="https://github.com/jmsmuigai" target="_blank" rel="noopener noreferrer" style="display: block; font-size: 16px; color: #333; text-decoration: none; font-weight: bold;">GitHub</a>
+    </div>
+  </div>
+  <form action="https://formspree.io/f/mjkyenoj" method="POST" style="text-align: center;">
+    <input type="text" name="name" placeholder="Your Name" required style="margin-bottom: 10px; padding: 10px; width: 80%; max-width: 400px; border: 1px solid #ddd; border-radius: 5px;" />
+    <input type="email" name="email" placeholder="Your Email" required style="margin-bottom: 10px; padding: 10px; width: 80%; max-width: 400px; border: 1px solid #ddd; border-radius: 5px;" />
+    <textarea name="message" rows="5" placeholder="Your Message" required style="margin-bottom: 10px; padding: 10px; width: 80%; max-width: 400px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+    <button type="submit" class="btn btn-color-1" style="padding: 10px 20px; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+  </form>
+</section>
+
+<!-- Chatbot -->
+<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+  <button id="chatbotToggle" style="padding: 15px; background: linear-gradient(135deg, #4a90e2, #ff758c); color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); font-size: 20px;">
+    💬
+  </button>
+  <div id="chatbot" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 350px; height: 400px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); overflow: hidden; display: flex; flex-direction: column;">
+    <div style="background: #4a90e2; color: white; padding: 10px; text-align: center; font-weight: bold; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+      Navigate the Website
+    </div>
+    <div id="chatbotMessages" style="flex: 1; padding: 10px; overflow-y: auto; background: #f9f9f9;">
+      <button onclick="scrollToSection('about')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">About Me</button>
+      <button onclick="scrollToSection('experience')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Experience</button>
+      <button onclick="scrollToSection('projects')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Projects</button>
+      <button onclick="scrollToSection('contact')" style="margin: 5px 0; padding: 10px; width: 100%; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">Contact Me</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const chatbotToggle = document.getElementById('chatbotToggle');
+  const chatbot = document.getElementById('chatbot');
+
+  // Toggle chatbot visibility
+  chatbotToggle.addEventListener('click', () => {
+    chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+  });
+
+  // Scroll to specific sections
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      chatbot.style.display = 'none'; // Close chatbot after navigation
+    }
+  }
+</script>
